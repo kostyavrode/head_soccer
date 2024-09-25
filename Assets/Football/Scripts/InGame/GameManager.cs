@@ -412,7 +412,7 @@ public class GameManager : MonoBehaviour
         gameOverMenu.SetActive(true);
     }
 
-    private float slowdownFactor = 0.01f;
+    private float slowdownFactor = 0.1f;
     private float slowdownLength = 0.01f;
 
     private float lastTimeScale;
