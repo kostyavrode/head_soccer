@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6149811883012466600}
   - component: {fileID: 8776261931431769858}
   - component: {fileID: 5739085195888062383}
+  - component: {fileID: 6070815265779438468}
   m_Layer: 5
   m_Name: ItemBuyButton
   m_TagString: Untagged
@@ -196,7 +197,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8776261931431769858}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6070815265779438468}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6070815265779438468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322758202173720600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3674fb318f59e5f4797d851a42b7c14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 5819453585316671573}
+  cost: 0
+  itemNumber: 0
+  sprite: {fileID: 21300000, guid: fa26a11630d88994481f950f305678d3, type: 3}
+  itemImg: {fileID: 3730023302434954424}
+  isCanInteract: 0
+  itemType: 0
+  costObject: {fileID: 4435714419650216524}
 --- !u!1 &4435714419650216524
 GameObject:
   m_ObjectHideFlags: 0
