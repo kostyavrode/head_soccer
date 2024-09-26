@@ -17,8 +17,14 @@ public class SettingManager : MonoBehaviour
             playerFaceSelectedObj.GetChild(0).gameObject.SetActive(!(value >= AssetManager.Use.playerSprite0.Count - 1));
 
             playerFaceSp.sprite = AssetManager.Use.playerSprite0[value];
-            playerName.text = AssetManager.Use.playersName[value];
-
+            if (PlayerPrefs.GetInt("lang") == 0)
+                {
+                playerName.text = AssetManager.Use.playersName[value];
+            }
+            else
+            {
+                playerName.text = "jogador";
+            }
             playerFaceIndex = value;
         }
         get

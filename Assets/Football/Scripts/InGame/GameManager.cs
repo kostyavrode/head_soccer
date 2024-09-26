@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public PlayerScripts player1, player2;
     public TextMesh p1Name, p2Name;
     public TextMesh p1ShotCountLabel, p2ShotCountLabel;
+    public TextMesh moneyText;
 
     public TextMesh timeLabel;
     public TextMesh p1ScoreLabel, p2ScoreLabel;
@@ -133,7 +134,14 @@ public class GameManager : MonoBehaviour
         player1.myBody = AssetManager.Use.playerBodySprite[PlayerPrefs.GetInt(VariablesName.PlayerBodyNumber, 0)];
 
         player1.myShoes = AssetManager.Use.shoesSprites[PlayerPrefs.GetInt(VariablesName.ShoesNumber, 0)];
-        p1Name.text = AssetManager.Use.playersName[player1Number];
+        if (PlayerPrefs.GetInt("lang") == 0)
+        {
+            p1Name.text = AssetManager.Use.playersName[player1Number];
+        }
+        else
+        {
+            p1Name.text = "jogador";
+        }
         player1.Init();
 
         /////////////////////////
@@ -157,7 +165,15 @@ public class GameManager : MonoBehaviour
         player2.myBody = AssetManager.Use.playerBodySprite[Random.Range(0, AssetManager.Use.playerBodySprite.Count)];
 
         player2.myShoes = AssetManager.Use.shoesSprites[Random.Range(0, AssetManager.Use.shoesSprites.Count)];
-        p2Name.text = AssetManager.Use.playersName[player2Number];
+
+        if (PlayerPrefs.GetInt("lang") == 0)
+        {
+            p2Name.text = AssetManager.Use.playersName[player2Number];
+        }
+        else
+        {
+            p2Name.text= "jogador";
+        }
         player2.Init();
 
         ////////////////////
@@ -378,28 +394,50 @@ public class GameManager : MonoBehaviour
                 gameOverMenu.transform.GetChild(1).GetChild(6).GetComponent<Renderer>().sortingOrder = 15;
                 gameOverMenu.transform.GetChild(1).GetChild(6).GetComponent<TextMesh>().text = p2Score.ToString();
 
-
+                moneyText.text = "+10";
+                PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 10);
                 if (p1Score > p2Score)
                 {
                     print("Player1 Win");
 
                     gameOverMenu.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = player1.myFace[0];
                     gameOverMenu.transform.GetChild(1).GetChild(0).GetComponent<SpriteRenderer>().sprite = player2.myFace[1];
-                    gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = p1Name.text + " Win";
+                    if (PlayerPrefs.GetInt("lang") == 1)
+                    {
+                        gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = p1Name.text + " ganhar";
+                    }
+                    else
+                    {
+                        gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = p1Name.text + " Win";
+                    }
                 }
                 else if (p1Score < p2Score)
                 {
                     print("Player2 Win");
                     gameOverMenu.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = player1.myFace[1];
                     gameOverMenu.transform.GetChild(1).GetChild(0).GetComponent<SpriteRenderer>().sprite = player2.myFace[0];
-                    gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = p2Name.text + " Win";
+                    if (PlayerPrefs.GetInt("lang") == 0)
+                    {
+                        gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = p2Name.text + " Win";
+                    }
+                    else
+                    {
+                        gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = p2Name.text + "ganhar";
+                    }
                 }
                 else
                 {
                     print("Draw Game");
                     gameOverMenu.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = player1.myFace[1];
                     gameOverMenu.transform.GetChild(1).GetChild(0).GetComponent<SpriteRenderer>().sprite = player2.myFace[1];
-                    gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = "Game Draw";
+                    if (PlayerPrefs.GetInt("lang") == 0)
+                    {
+                        gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = "Game Draw";
+                    }
+                    else
+                    {
+                        gameOverMenu.transform.GetChild(2).GetComponent<TextMesh>().text = "sorteio do jogo";
+                    }
                 }
 
                 Invoke("SetGAmeOverMenuTrue", 1);
