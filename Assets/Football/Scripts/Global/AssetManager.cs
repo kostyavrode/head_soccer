@@ -39,6 +39,7 @@ public class AssetManager : MonoBehaviour
             {
                 Debug.Log("nety");
                 playerSprite0.Remove(playerSprite0[i]);
+                playerSprite1.Remove(playerSprite1[i]);
                 playersName.Remove(playersName[i]);
             }
         }

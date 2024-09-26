@@ -305,17 +305,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersName:
-  - Cris Donarlo
-  - Zaramona
-  - Segal Maris
-  - Sep zizi
-  - Sessi
-  - Zia Hammer
-  - Mele
-  - Zi Midane
-  - Javad Rastad
+  - Player
+  - Player
+  - Player
+  - Player
+  - Player
+  - Player
+  - Player
+  - Player
+  - Player
   playerSprite0:
-  - {fileID: 21300000, guid: 147cd15a6c41a794582f70d124d1959e, type: 3}
+  - {fileID: 21300000, guid: 62e8d2c173ad22e4a9005734edd6fc99, type: 3}
   - {fileID: 21300000, guid: 3f8dad20d50c0014ca5de700f2354af5, type: 3}
   - {fileID: 21300000, guid: 00441f11f33dbc14588ee2c73652f7fa, type: 3}
   - {fileID: 21300000, guid: d23df75cebd8ff640827a4a153708b12, type: 3}
@@ -323,9 +323,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fc400b820e44b6d48abe144fe8793c18, type: 3}
   - {fileID: 21300000, guid: 2f63f88aeded53b4ca5890f48b810a53, type: 3}
   - {fileID: 21300000, guid: 274becd92878fde45ba38e01d4658929, type: 3}
-  - {fileID: 21300000, guid: 45dd58fc332601b49901fbb424879103, type: 3}
+  - {fileID: 21300000, guid: c61a88b32e0771944becd195d50096d6, type: 3}
   playerSprite1:
-  - {fileID: 21300000, guid: 0373836138562cb4f9faa57c8045e739, type: 3}
+  - {fileID: 21300000, guid: 62e8d2c173ad22e4a9005734edd6fc99, type: 3}
   - {fileID: 21300000, guid: b860fad7fe8d7e447bba5f7409a430fc, type: 3}
   - {fileID: 21300000, guid: 1e87933347dcc2148bf539dfca702085, type: 3}
   - {fileID: 21300000, guid: c45031f93243c904ca832da94a575ac7, type: 3}
@@ -333,7 +333,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f8b29311a01be77428a4a24999a9e30e, type: 3}
   - {fileID: 21300000, guid: b4f2fa63f35868b4bac967411d7999e8, type: 3}
   - {fileID: 21300000, guid: 549975482b308d841a424d1a6e578584, type: 3}
-  - {fileID: 21300000, guid: 69d3127f2f99ca54798aaa8174068fb6, type: 3}
+  - {fileID: 21300000, guid: c61a88b32e0771944becd195d50096d6, type: 3}
   playerBodySprite:
   - {fileID: 21300000, guid: 5fa5bec05989eaf47a58ca9a6dcdc4f5, type: 3}
   - {fileID: 21300000, guid: fa26a11630d88994481f950f305678d3, type: 3}
@@ -344,8 +344,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b3775949307c03a4dae8a4682215276d, type: 3}
   - {fileID: 21300000, guid: 3bfb90432fd10c34da7b02d68c9be9eb, type: 3}
   - {fileID: 21300000, guid: 5df90c08844f91246bc54fad5953642d, type: 3}
-  - {fileID: 21300000, guid: de0252d03129920418e14185a27db1aa, type: 3}
-  - {fileID: 21300000, guid: 0bcfa39e39721754e8818c10d9e20b7d, type: 3}
   shoesSprites:
   - {fileID: 21300000, guid: 55a4c74f329226949a805664a622574d, type: 3}
   - {fileID: 21300000, guid: 5fd3fd485f138fa4cbd6be26fb8a6e53, type: 3}
@@ -356,7 +354,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ec766d3a40e3b7942a2d2d0c5bfbcd15, type: 3}
   - {fileID: 21300000, guid: 3bb9d707d4ba66b4e8dcb4fe1a387a0c, type: 3}
   - {fileID: 21300000, guid: 283c985e8733e674cb29d2d06acd877b, type: 3}
-  - {fileID: 21300000, guid: b487e8e1547444b48baf4c2013beeacd, type: 3}
   ballSprites:
   - {fileID: 21300000, guid: f6b9aef1629a2f14ab023fa8bc6b73b8, type: 3}
   - {fileID: 21300002, guid: f6b9aef1629a2f14ab023fa8bc6b73b8, type: 3}
